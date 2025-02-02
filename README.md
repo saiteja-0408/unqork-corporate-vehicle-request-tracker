@@ -1,12 +1,10 @@
 # Unqork Corporate Vehicle Request Tracker 🚗
-# Novice Badge Certification Project
-
+**Novice Badge Certification Project**</br>
 This repository contains the Corporate Vehicle Request Tracker, an application built in Unqork as part of the Novice Badge Certification Exam. The application is designed to manage corporate vehicle requests submitted by employees, with an approval process managed by operations.
 
 
 # 📌 Project Overview
-**The Corporate Vehicle Request Tracker allows:**
-
+**The Corporate Vehicle Request Tracker allows:**</br>
 • Employees to submit vehicle requests by providing trip details.</br>
 • The system to validate the request and ensure compliance.</br>
 • Operations Managers to review, approve, or reject requests.</br>
@@ -25,7 +23,7 @@ This project was built using Unqork **Workflow Builder** and consists of five mo
 
 
 # ⚙️ Workflow Implementation
-The project workflow consists of:
+The project workflow consists of:</br>
 
 • **Three Swimlanes:** RelationshipManager, Automated, OperationsManager</br>
 • **Decision Gateways** for validation</br>
@@ -36,8 +34,8 @@ The project workflow consists of:
 <details> <summary>📸 Workflow Diagram</summary> <img src="./workflow/workflow-diagram.png" width="600"/> </details>
 
 
-# ✅ Certification & Grading
-This project meets all Novice Badge Exam grading criteria, as confirmed by the rubric.
+# ✅ Certification & Grading</br>
+This project meets all Novice Badge Exam grading criteria, as confirmed by the rubric.</br>
 
 ✔ Component IDs follow camelCase</br>
 ✔ Correct field types and property IDs used</br>
@@ -45,7 +43,7 @@ This project meets all Novice Badge Exam grading criteria, as confirmed by the r
 ✔ Dashboard includes required fields and KPI widget</br>
 
 
-# 🚀 How to Run
+# 🚀 How to Run</br>
 1. Import the JSON files into an Unqork workspace.</br>
 2. Verify the Workflow & Modules in Unqork Designer.</br>
 3. Test Submissions using the Employee and Operations Manager roles.</br>
