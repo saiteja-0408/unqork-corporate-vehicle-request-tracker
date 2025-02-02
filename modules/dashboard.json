@@ -1,1 +1,358 @@
-[{"input":false,"tableView":false,"key":"initOnLoad","label":"","protected":false,"unique":false,"persistent":false,"linked":{"inputs":[],"outputs":["plugDashboardData"]},"initializerData":{"dataInputObject":[],"dataOutputObject":[{"id":"plugDashboardData","type":"trigger","value":"GO"}]},"triggerType":"new","type":"initializer","componentId":"3367ddf9-465e-473a-aa1d-5455b4bc0528","creator":"singirikonda.saiteja@gwu.edu","created":"2025-01-17T22:55:15.177Z","modifier":"singirikonda.saiteja@gwu.edu","modified":"2025-01-19T19:23:54.358Z","permissions":{},"tags":"","ancestors":["root"]},{"multiple":true,"input":true,"tableView":true,"key":"plugDashboardData","label":"","protected":false,"unique":false,"persistent":false,"linked":{"inputs":["'678831588e32f8f6ceb95137'","'employeeFirstName,employeeLastName,employeeEmail,dateStart,dateEnd,status'",null],"outputs":[null]},"integratorData":{"integratorUrl":"/fbu/uapi/system/getSubmissions","dataInputObject":[{"id":"'678831588e32f8f6ceb95137'","mapping":"workflowId","required":false,"exclude":false,"header":false,"resolveBase64":false,"optional":false},{"id":"'employeeFirstName,employeeLastName,employeeEmail,dateStart,dateEnd,status'","mapping":"fields","required":false,"exclude":false,"header":false,"resolveBase64":false,"optional":false}],"dataOutputObject":[],"dataFrame":[],"dataTestObject":[]},"triggerType":"manual","serviceType":"unqork","requestType":"get","topLevelArray":false,"arrayKeyPromote":"","assignEmptyValues":true,"unqorkApi":"/system/getSubmissions:get","service":null,"preRequestTransform":null,"prefix":"","type":"integrator","urlPlaceholders":false,"allowSingleRecordArray":true,"doNotLookForDataKeyInResponse":true,"componentId":"119f2e09-0770-4154-8753-f2a016015d79","isMultiPartApi":false,"preTrigger":"","postTrigger":"dwfKpi","errorHandler":"","isBinaryRequest":false,"creator":"singirikonda.saiteja@gwu.edu","created":"2025-01-17T22:43:40.345Z","modifier":"singirikonda.saiteja@gwu.edu","modified":"2025-01-19T21:11:17.986Z","permissions":{},"tags":"","ancestors":["root"],"requiredReturnValue":""},{"multiple":false,"input":false,"key":"vgDashboardDisplay","label":"Vehicle Requests Entries","protected":false,"unique":false,"persistent":true,"showTitle":false,"sortByColumns":true,"viewgridData":{"selectRowIDProperty":"_id","selectRow":"selectedId","action":"null","event":"","dataDisplayObject":[{"id":"employeeFirstName","formula":"","heading":"First Name","type":"string","css":"","button":false},{"id":"employeeLastName","formula":"","heading":"Last Name","type":"","css":"","button":false},{"id":"employeeEmail","formula":"","heading":"Email","type":"","css":"","button":false},{"id":"dateStart","formula":"","heading":"Trip Start Date","type":"date","css":"","button":false},{"id":"dateEnd","formula":"","heading":"Trip End Date","type":"date","css":"","button":false},{"id":"status","formula":"","heading":"Status","type":"","css":"","button":false}],"dataInputObject":[{"id":"plugDashboardData","required":false}],"dataOutputObject":[{"id":"selectedId","mapping":"_id"}]},"type":"viewgrid","componentId":"3021d0fd-2242-40d4-a2ba-3713315cc486","creator":"singirikonda.saiteja@gwu.edu","created":"2025-01-17T22:57:16.325Z","modifier":"singirikonda.saiteja@gwu.edu","modified":"2025-01-19T21:17:47.574Z","permissions":{},"tags":"","ancestors":["root"]},{"multiple":true,"input":false,"key":"dwfKpi","label":"dwfKpi","protected":false,"unique":false,"persistent":false,"showTitle":false,"applyFindReplace":false,"triggerType":"watch","dataworkflowData":{"dataInputObject":[{"id":"plugDashboardData","inputLabel":"-1_O1","key":-1,"inputRequired":"Yes","source":"Default"}],"dataOperationObject":[{"dataOperation":"Size","key":-21,"label":"totalSubmissions","output1":"-21_O1","output2":"","input1":"-1_O1","input2":"","argument":"","preserveArgumentType":false}],"dataOutputObject":[{"id":"dwfKpi","outputLabel":"-21_O1","key":-3,"action":"value"}],"dataTestObject":[],"goDiagram":{"model":{"nodeDataArray":[{"type":"Input","label":"plugDashboardData","component":"plugDashboardData","required":"Yes","title":"Input","category":"Input","source":"Default","key":-1,"__gohashid":151965,"location":"0 3.25"},{"type":"Size","label":"totalSubmissions","title":"Size","category":"Size","key":-21,"__gohashid":152960,"location":"130.41534423828125 0","preserveArgumentType":false},{"type":"Output","label":"dwfKpi","component":"dwfKpi","action":"value","title":"Output","category":"Output","key":-3,"__gohashid":156651,"location":"259.39552307128906 9.789910888671876"}],"linkDataArray":[{"__gohashid":172398,"from":-1,"to":-21,"frompid":"O1","topid":"I1"},{"__gohashid":173148,"from":-21,"to":-3,"frompid":"O1","topid":"I1"}]}},"isDebugMode":false,"errorHandler":""},"manualLayout":false,"type":"dataworkflow","errorTriggerFeatureEnabled":true,"tags":[],"componentId":"bc0c5ecf-c51b-4523-a40f-b1f3b4837125","creator":"singirikonda.saiteja@gwu.edu","created":"2025-01-19T16:53:30.276Z","modifier":"singirikonda.saiteja@gwu.edu","modified":"2025-01-19T21:04:46.908Z","permissions":{},"lockKey":true,"ancestors":["root"]},{"multiple":true,"input":false,"key":"kpiSubmissions","label":"kpiSubmissions","protected":false,"unique":false,"persistent":true,"showTitle":false,"kpiData":{"kpiTitle":"Total number of submissions","kpiFormat":"","kpiHeight":100,"kpiColor":"bg-info","dataInputObject":[{"id":"dwfKpi"}],"dataOutputObject":[]},"type":"kpi","tags":[],"creator":"unqorkgsuite_christopher.williams@unqork.com","created":"2021-04-18T03:14:45.889Z","modifier":"singirikonda.saiteja@gwu.edu","modified":"2025-01-19T21:04:19.286Z","ancestors":["root"],"watcherList":[],"parentChanged":true,"submission":{},"permissions":{},"wasDropped":true,"componentId":"2f2842fe-026a-4f59-a100-b269748a95f7"}]
+[
+  {
+    "input": false,
+    "tableView": false,
+    "key": "initOnLoad",
+    "label": "",
+    "protected": false,
+    "unique": false,
+    "persistent": false,
+    "linked": {
+      "inputs": [],
+      "outputs": [
+        "plugDashboardData"
+      ]
+    },
+    "initializerData": {
+      "dataInputObject": [],
+      "dataOutputObject": [
+        {
+          "id": "plugDashboardData",
+          "type": "trigger",
+          "value": "GO"
+        }
+      ]
+    },
+    "triggerType": "new",
+    "type": "initializer",
+    "componentId": "3367ddf9-465e-473a-aa1d-5455b4bc0528",
+    "creator": "singirikonda.saiteja@gwu.edu",
+    "created": "2025-01-17T22:55:15.177Z",
+    "modifier": "singirikonda.saiteja@gwu.edu",
+    "modified": "2025-01-19T19:23:54.358Z",
+    "permissions": {},
+    "tags": "",
+    "ancestors": [
+      "root"
+    ]
+  },
+  {
+    "multiple": true,
+    "input": true,
+    "tableView": true,
+    "key": "plugDashboardData",
+    "label": "",
+    "protected": false,
+    "unique": false,
+    "persistent": false,
+    "linked": {
+      "inputs": [
+        "'678831588e32f8f6ceb95137'",
+        "'employeeFirstName,employeeLastName,employeeEmail,dateStart,dateEnd,status'",
+        null
+      ],
+      "outputs": [
+        null
+      ]
+    },
+    "integratorData": {
+      "integratorUrl": "/fbu/uapi/system/getSubmissions",
+      "dataInputObject": [
+        {
+          "id": "'678831588e32f8f6ceb95137'",
+          "mapping": "workflowId",
+          "required": false,
+          "exclude": false,
+          "header": false,
+          "resolveBase64": false,
+          "optional": false
+        },
+        {
+          "id": "'employeeFirstName,employeeLastName,employeeEmail,dateStart,dateEnd,status'",
+          "mapping": "fields",
+          "required": false,
+          "exclude": false,
+          "header": false,
+          "resolveBase64": false,
+          "optional": false
+        }
+      ],
+      "dataOutputObject": [],
+      "dataFrame": [],
+      "dataTestObject": []
+    },
+    "triggerType": "manual",
+    "serviceType": "unqork",
+    "requestType": "get",
+    "topLevelArray": false,
+    "arrayKeyPromote": "",
+    "assignEmptyValues": true,
+    "unqorkApi": "/system/getSubmissions:get",
+    "service": null,
+    "preRequestTransform": null,
+    "prefix": "",
+    "type": "integrator",
+    "urlPlaceholders": false,
+    "allowSingleRecordArray": true,
+    "doNotLookForDataKeyInResponse": true,
+    "componentId": "119f2e09-0770-4154-8753-f2a016015d79",
+    "isMultiPartApi": false,
+    "preTrigger": "",
+    "postTrigger": "dwfKpi",
+    "errorHandler": "",
+    "isBinaryRequest": false,
+    "creator": "singirikonda.saiteja@gwu.edu",
+    "created": "2025-01-17T22:43:40.345Z",
+    "modifier": "singirikonda.saiteja@gwu.edu",
+    "modified": "2025-01-19T21:11:17.986Z",
+    "permissions": {},
+    "tags": "",
+    "ancestors": [
+      "root"
+    ],
+    "requiredReturnValue": ""
+  },
+  {
+    "multiple": false,
+    "input": false,
+    "key": "vgDashboardDisplay",
+    "label": "Vehicle Requests Entries",
+    "protected": false,
+    "unique": false,
+    "persistent": true,
+    "showTitle": false,
+    "sortByColumns": true,
+    "viewgridData": {
+      "selectRowIDProperty": "_id",
+      "selectRow": "selectedId",
+      "action": "null",
+      "event": "",
+      "dataDisplayObject": [
+        {
+          "id": "employeeFirstName",
+          "formula": "",
+          "heading": "First Name",
+          "type": "string",
+          "css": "",
+          "button": false
+        },
+        {
+          "id": "employeeLastName",
+          "formula": "",
+          "heading": "Last Name",
+          "type": "",
+          "css": "",
+          "button": false
+        },
+        {
+          "id": "employeeEmail",
+          "formula": "",
+          "heading": "Email",
+          "type": "",
+          "css": "",
+          "button": false
+        },
+        {
+          "id": "dateStart",
+          "formula": "",
+          "heading": "Trip Start Date",
+          "type": "date",
+          "css": "",
+          "button": false
+        },
+        {
+          "id": "dateEnd",
+          "formula": "",
+          "heading": "Trip End Date",
+          "type": "date",
+          "css": "",
+          "button": false
+        },
+        {
+          "id": "status",
+          "formula": "",
+          "heading": "Status",
+          "type": "",
+          "css": "",
+          "button": false
+        }
+      ],
+      "dataInputObject": [
+        {
+          "id": "plugDashboardData",
+          "required": false
+        }
+      ],
+      "dataOutputObject": [
+        {
+          "id": "selectedId",
+          "mapping": "_id"
+        }
+      ]
+    },
+    "type": "viewgrid",
+    "componentId": "3021d0fd-2242-40d4-a2ba-3713315cc486",
+    "creator": "singirikonda.saiteja@gwu.edu",
+    "created": "2025-01-17T22:57:16.325Z",
+    "modifier": "singirikonda.saiteja@gwu.edu",
+    "modified": "2025-01-19T21:17:47.574Z",
+    "permissions": {},
+    "tags": "",
+    "ancestors": [
+      "root"
+    ]
+  },
+  {
+    "multiple": true,
+    "input": false,
+    "key": "dwfKpi",
+    "label": "dwfKpi",
+    "protected": false,
+    "unique": false,
+    "persistent": false,
+    "showTitle": false,
+    "applyFindReplace": false,
+    "triggerType": "watch",
+    "dataworkflowData": {
+      "dataInputObject": [
+        {
+          "id": "plugDashboardData",
+          "inputLabel": "-1_O1",
+          "key": -1,
+          "inputRequired": "Yes",
+          "source": "Default"
+        }
+      ],
+      "dataOperationObject": [
+        {
+          "dataOperation": "Size",
+          "key": -21,
+          "label": "totalSubmissions",
+          "output1": "-21_O1",
+          "output2": "",
+          "input1": "-1_O1",
+          "input2": "",
+          "argument": "",
+          "preserveArgumentType": false
+        }
+      ],
+      "dataOutputObject": [
+        {
+          "id": "dwfKpi",
+          "outputLabel": "-21_O1",
+          "key": -3,
+          "action": "value"
+        }
+      ],
+      "dataTestObject": [],
+      "goDiagram": {
+        "model": {
+          "nodeDataArray": [
+            {
+              "type": "Input",
+              "label": "plugDashboardData",
+              "component": "plugDashboardData",
+              "required": "Yes",
+              "title": "Input",
+              "category": "Input",
+              "source": "Default",
+              "key": -1,
+              "__gohashid": 151965,
+              "location": "0 3.25"
+            },
+            {
+              "type": "Size",
+              "label": "totalSubmissions",
+              "title": "Size",
+              "category": "Size",
+              "key": -21,
+              "__gohashid": 152960,
+              "location": "130.41534423828125 0",
+              "preserveArgumentType": false
+            },
+            {
+              "type": "Output",
+              "label": "dwfKpi",
+              "component": "dwfKpi",
+              "action": "value",
+              "title": "Output",
+              "category": "Output",
+              "key": -3,
+              "__gohashid": 156651,
+              "location": "259.39552307128906 9.789910888671876"
+            }
+          ],
+          "linkDataArray": [
+            {
+              "__gohashid": 172398,
+              "from": -1,
+              "to": -21,
+              "frompid": "O1",
+              "topid": "I1"
+            },
+            {
+              "__gohashid": 173148,
+              "from": -21,
+              "to": -3,
+              "frompid": "O1",
+              "topid": "I1"
+            }
+          ]
+        }
+      },
+      "isDebugMode": false,
+      "errorHandler": ""
+    },
+    "manualLayout": false,
+    "type": "dataworkflow",
+    "errorTriggerFeatureEnabled": true,
+    "tags": [],
+    "componentId": "bc0c5ecf-c51b-4523-a40f-b1f3b4837125",
+    "creator": "singirikonda.saiteja@gwu.edu",
+    "created": "2025-01-19T16:53:30.276Z",
+    "modifier": "singirikonda.saiteja@gwu.edu",
+    "modified": "2025-01-19T21:04:46.908Z",
+    "permissions": {},
+    "lockKey": true,
+    "ancestors": [
+      "root"
+    ]
+  },
+  {
+    "multiple": true,
+    "input": false,
+    "key": "kpiSubmissions",
+    "label": "kpiSubmissions",
+    "protected": false,
+    "unique": false,
+    "persistent": true,
+    "showTitle": false,
+    "kpiData": {
+      "kpiTitle": "Total number of submissions",
+      "kpiFormat": "",
+      "kpiHeight": 100,
+      "kpiColor": "bg-info",
+      "dataInputObject": [
+        {
+          "id": "dwfKpi"
+        }
+      ],
+      "dataOutputObject": []
+    },
+    "type": "kpi",
+    "tags": [],
+    "creator": "unqorkgsuite_christopher.williams@unqork.com",
+    "created": "2021-04-18T03:14:45.889Z",
+    "modifier": "singirikonda.saiteja@gwu.edu",
+    "modified": "2025-01-19T21:04:19.286Z",
+    "ancestors": [
+      "root"
+    ],
+    "watcherList": [],
+    "parentChanged": true,
+    "submission": {},
+    "permissions": {},
+    "wasDropped": true,
+    "componentId": "2f2842fe-026a-4f59-a100-b269748a95f7"
+  }
+]
